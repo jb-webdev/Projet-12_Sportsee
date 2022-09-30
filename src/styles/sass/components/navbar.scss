@@ -1,0 +1,47 @@
+@import '../utils/_variables-colors.scss';
+
+
+.headerNavbar {
+    height: 91px;
+    margin: 0;
+    padding: 0;
+}
+
+.navBarContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    background-color: $color-bg-1;
+}
+
+.navbarLinkLogo {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navbarLogo {
+    height: 57px;
+    width: auto;
+}
+
+.navbarWrapperLink {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.linkNavbar {
+    color: $color-fonts-2;
+    text-decoration: none;
+    font-family: $fonts-familly-1;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+}

@@ -1,8 +1,15 @@
+import React, {useContext} from 'react'
+import Navbar from './components/Navbar/index.js'
+import ApppRouter from './Router/index.js'
+
+import {GlobalContext} from './utils/Context/globalContext.js'
 
 function App() {
+  const {userAuth} = useContext(GlobalContext)
   return (
     <div className="App">
-      <h1>Mise en place application</h1>
+      {userAuth ? <Navbar /> : ''}
+      <ApppRouter />
     </div>
   )
 }
