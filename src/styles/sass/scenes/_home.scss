@@ -1,6 +1,7 @@
 @import '../utils/_variables-colors.scss';
+
 .mainHome {
-    background-color: #dfdfdf;
+    background-color: $color-bg-21;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -8,7 +9,7 @@
     align-items: center;
 }
 
-.mainHome h1,
+.mainHome h1, 
 p {
     color: $color-fonts-1;
 }
@@ -39,7 +40,7 @@ p {
 
 
 .WrapperFormulaire fieldset {
-    background-color: #dfdfdf;
+    background-color:$color-bg-21;
 }
 
 .WrapperFormulaire fieldset legend {

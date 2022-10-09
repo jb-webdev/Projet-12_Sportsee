@@ -1,0 +1,11 @@
+@import '../utils/_variables-colors.scss';
+
+.chartsIntensity {
+    width: 258px;
+    height: 263px;
+    position: relative;
+    border-radius: 5px;
+    background-color: $color-bg-12;
+    
+    margin-right: 5px;
+}

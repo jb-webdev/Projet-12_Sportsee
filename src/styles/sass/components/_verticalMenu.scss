@@ -1,0 +1,46 @@
+@import '../utils/_variables-colors.scss';
+
+.verticalMenu {
+    width: 120px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #000000;
+    position: absolute;
+    //padding: 0 0 20rem 0;
+    box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
+}
+.wrapper-icons{
+    min-height: 70vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+.iconVerticalMenu {
+    width: 50px;
+}
+
+.verticalMenuCopyright{
+    background: #000000;
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    
+
+}
+.verticalMenuCopyright p {
+    width: 300px;
+    color: #ffffff;
+    font-size: 0.8rem;
+    text-align: center;
+    margin: 0;
+}
+.rotate{
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
