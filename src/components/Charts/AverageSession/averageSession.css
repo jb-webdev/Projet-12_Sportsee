@@ -1,13 +1,14 @@
-@import '../utils/_variables-colors.scss';
-@import '../utils/_mixins.scss';
-
 .averageContainer {
-    @include charts-sizing;
-    background-color: $color-bg-3;
+    position: relative;
+    width: 258px;
+    height: 263px;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: var(--color-bg-3);
 }
 
 .averageTitle {
-    color: $color-fonts-2;
+    color: var(--color-fonts-2);
     font-family: Roboto;
     position: absolute;
     font-size: 15px;
@@ -27,11 +28,11 @@
     font-weight: 600;
     line-height: 0rem;
     padding: 0.5rem 0.5rem;
-    background-color: $color-bg-2;
+    background-color: var(--color-fonts-2);
 }
 
 .formatXAxis {
-    color: $color-fonts-2;
+    color: var(--color-fonts-2);
     font-family: Roboto;
     font-weight: 500;
     font-size: 12px;

@@ -1,30 +1,25 @@
-@import '../utils/_variables-colors.scss';
-
 .mainHome {
-    background-color: $color-bg-21;
+    background-color: var(--color-bg-21);
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-.mainHome h1, 
+.mainHome h1,
 p {
-    color: $color-fonts-1;
+    color: var(--color-fonts-1);
 }
-
 .WrapperFormulaire {
     width: 450px;
     border-radius: 5px;
 }
-
 .btnNavigate {
     display: block;
     margin: 20px auto;
     outline: 0;
-    background-color: $color-bg-3;
-    color: $color-fonts-1;
+    background-color: var(--color-bg-3);
+    color: var(--color-fonts-1);
     font-weight: bolder;
     width: 90%;
     border: 0;
@@ -33,34 +28,36 @@ p {
     text-decoration: none;
     cursor: pointer;
 }
-
 .btnNavigate:hover {
-    background-color: $color-bg-hover-3;
+    background-color: var(--color-bg-hover-3);
 }
-
-
 .WrapperFormulaire fieldset {
-    background-color:$color-bg-21;
+    background-color: var(--color-bg-21);
 }
-
 .WrapperFormulaire fieldset legend {
-    color: $color-fonts-1;
+    color: var(--color-fonts-1);
 }
-
 .radio-buttons {
     display: flex;
     flex-direction: row;
 }
-
 .wrapperInput {
     width: 50%;
-}
-
-.wrapperInput label {
-    color: $color-fonts-1;
+    margin-left: 5px;
     margin-right: 5px;
 }
-
+.wrapperInput  p{
+    text-align: center;
+}
+.wrapperInput div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.wrapperInput label {
+    color: var(--color-fonts-1);
+    margin-right: 5px;
+}
 .wrapperInput input {
     margin-right: 15px;
 }

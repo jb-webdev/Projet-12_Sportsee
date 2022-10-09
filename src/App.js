@@ -1,4 +1,5 @@
 import React, {useContext} from 'react'
+import './App.css'
 import Navbar from './components/Navbar/index.js'
 import VerticalMenu from './components/VerticalMenu/index.js'
 import ApppRouter from './Router/index.js'

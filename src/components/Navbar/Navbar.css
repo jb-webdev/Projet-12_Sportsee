@@ -1,6 +1,3 @@
-@import '../utils/_variables-colors.scss';
-
-
 .headerNavbar {
     min-height: 20%;
     margin: 0;
@@ -12,7 +9,7 @@
     flex-direction: row;
     width: 100%;
     height: 100%;
-    background-color: $color-bg-1;
+    background-color: var(--color-bg-1);
 }
 
 .navbarLinkLogo {
@@ -37,9 +34,9 @@
 }
 
 .linkNavbar {
-    color: $color-fonts-2;
+    color: var(--color-fonts-2);
     text-decoration: none;
-    font-family: $fonts-familly-1;
+    font-family: var(--fonts-familly-1);
     font-style: normal;
     font-weight: 500;
     font-size: 24px;

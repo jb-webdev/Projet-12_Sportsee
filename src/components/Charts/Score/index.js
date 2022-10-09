@@ -1,4 +1,6 @@
 import React from 'react'
+import './score.css'
+
 import {
   ResponsiveContainer,
   PieChart,

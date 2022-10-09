@@ -1,4 +1,5 @@
 import React from 'react'
+import './intensity.css'
 import {
   Radar,
   RadarChart,
@@ -8,7 +9,34 @@ import {
   Tooltip,
 } from "recharts"
 
-export default function Intensity({ data }) {
+/*const dataTest = [
+    {
+      "value": 200,
+      "kind": 1
+    },
+    {
+      "value": 240,
+      "kind": 2
+    },
+    {
+      "value": 80,
+      "kind": 3
+    },
+    {
+      "value": 80,
+      "kind": 4
+    },
+    {
+      "value": 220,
+      "kind": 5
+    },
+    {
+      "value": 110,
+      "kind": 6
+    }
+  ]*/
+
+export default function Intensity(props) {
   const formatActivity = (kindValue) => {
     let toFrench;
     switch (kindValue) {
@@ -50,7 +78,7 @@ export default function Intensity({ data }) {
           innerRadius="5%"
           //rayon extérieur maxminim du cercle
           outerRadius="60%"
-          data={data}
+          data={props.data}
 
         >
           <PolarGrid radialLines={false} />
