@@ -1,44 +1,47 @@
 .verticalMenu {
-    width: 120px;
-    min-height: 100%;
+    position: fixed;
+    bottom: 0;
+    width: 117px;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    background: #000000;
-    position: absolute;
-    /*padding: 0 0 20rem 0;*/
-    box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
-}
-.wrapper-icons{
-    min-height: 70vh;
-    display: flex;
+    align-items: center;
     justify-content: space-around;
-    align-items: center;
-    align-content: center;
-    flex-direction: column;
-}
-.iconVerticalMenu {
-    width: 50px;
+    background: var(--color-bg-black);
+    box-shadow: var(--color-box-Shadow);
+    padding-top: 340px;
+    overflow: hidden;
 }
 
-.verticalMenuCopyright{
-    background: #000000;
-    min-height: 30vh;
+.wrapper-icons {
     display: flex;
     align-items: center;
-    overflow: hidden;
-    
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 150px;
+}
 
+.iconVerticalMenu {
+    width: 64px;
+    margin-bottom: 20px;
 }
-.verticalMenuCopyright p {
-    width: 300px;
-    color: #ffffff;
-    font-size: 0.8rem;
-    text-align: center;
-    margin: 0;
-}
-.rotate{
-    -webkit-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
+
+.verticalMenuCopyright {
+    height: 117px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transform: rotate(270deg);
+}
+
+.verticalCopyright {
+    color: var(--color-fonts-white);
+    margin: 0;
+    font-family: var(--fonts-familly-1);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+
 }

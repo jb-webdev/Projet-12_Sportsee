@@ -1,0 +1,30 @@
+.boxNutritional {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    background-color: var(--color-bg-white-3);
+    border-radius: 5px;
+    box-shadow: var(--color-box-Shadow-2);
+    height: 124px;
+    width: 258px;
+    border-radius: 5px;
+  }
+  .boxNutritional img{
+    width: 60px;
+    height: 60px;
+  }
+  .textBoxNutritional {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    line-height: 0.5;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-fonts-grey-secondary);
+  }
+  .paraphNutritional {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-fonts-grey-primary);
+  }

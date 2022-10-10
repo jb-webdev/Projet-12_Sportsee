@@ -13,11 +13,10 @@ export default function Score({ data }) {
   const scorePerCent = todayScore * 100;
   const rest = 100 - scorePerCent;
   const score = [
-    { name: "objectif", value: scorePerCent, fillColor: `red` },
-    { name: "objectif Restant", value: rest, fillColor: "white" },
+    { name: "objectif", value: scorePerCent, fillColor: '#ff0101' },
+    { name: "objectif Restant", value: rest, fillColor: '#fbfbfb' },
   ];
   const scoreLabel = score[0].value + "%";
-  // console.log(scoreLabel);
   const data0 = [{ name: "Score", value: 100 }];
   return (
     <section className="ScoreWrapper">
@@ -58,7 +57,7 @@ export default function Score({ data }) {
 
       <div className="ScoreLegend">
         <p className="scoreLabel">{scoreLabel}</p>
-        <p>
+        <p className='scoreLabelText'>
           de votre <br />
           objectif
         </p>

@@ -3,7 +3,8 @@
     height: 263px;
     position: relative;
     border-radius: 5px;
-    background-color: var(--color-bg-12);
-    
+    background-color: var(--color-bg-grey-secondary);
+
     margin-right: 5px;
+    flex-grow: 1;
 }

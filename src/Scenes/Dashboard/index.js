@@ -10,6 +10,7 @@ import Weight from '../../components/Charts/Weight/index.js'
 import AverageSession from '../../components/Charts/AverageSession/index.js'
 import Intensity from '../../components/Charts/Intensity/index.js'
 import Score from '../../components/Charts/Score/index.js'
+
 import InfoNutritional from '../../components/InfoNutritional/index.js'
 // icons
 import calories from '../../utils/assets/icon-svg/icon-calories.svg'
@@ -19,22 +20,22 @@ import lipides from '../../utils/assets/icon-svg/icon-lipids.svg'
 
 
 export default function Dashboard() {
-  // const { userAuth} = useContext(GlobalContext)
   const { userAuth, userInfo, userPerformance, userAverageSession, userActivity } = useContext(GlobalContext)
   
   // console.log(userInfo.userInfos.firstName)
   // console.log(userActivity)
   // console.log(userAverageSession)
-  console.log(userPerformance.data)
+  // console.log(userPerformance.data)
   //console.log(userInfo)
 
   return (
     <>
-      {
-      !userAuth ? <Error /> : 
-      <>
+      { !userAuth ? 
+      <Error /> 
+      : 
+      <main className='mainDashboard'>
         <Sayhello userName={userInfo.userInfos.firstName} />
-        <div className='mainDashBoard'>
+        <div className='mainWrapper'>
           <section className='wrapperCharts'>
             <Weight data={userActivity} />
             <div className='wrapperSmallCharts'>
@@ -68,9 +69,8 @@ export default function Dashboard() {
             />
 
           </section>
-         
         </div>
-      </>
+      </main>
       }
     </>
   )

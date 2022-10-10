@@ -1,0 +1,47 @@
+:root {
+ 
+    /* new colors */
+    --color-bg-black: #020203;
+    --color-bg-white: #ffffff;
+    --color-bg-white-2: #dfdfdf;
+    --color-bg-white-3: #fbfbfb;
+    --color-bg-primary: #ff0101;
+    --color-bg-primary-2: #e60000;
+    --color-bg-primary-3: #ff0000;
+    --color-bg-grey-secondary: #282d30;
+
+    /* Background hover */
+    --color-bg-hover-primary: #ff0101b7;
+
+    /* Box Shadow */
+    --color-box-Shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    --color-box-Shadow-2: 0px 2px 4px rgba(0, 0, 0, 0.0212249);;
+
+    /* fonts color */
+    --color-fonts-white: #ffffff;
+    --color-fonts-black: #000000;
+    --color-fonts-primary: #ff0101;
+    --color-fonts-secondary: #20253A;
+    --color-grey-primary: #74798c;
+    --color-fonts-grey-primary: #74798c;
+    --color-fonts-grey-secondary: #282d30;
+
+    /* fonts familly */
+    --fonts-familly-1: 'Roboto';
+
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.App {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+    bottom: 0;
+}

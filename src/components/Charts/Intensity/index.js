@@ -37,7 +37,7 @@ import {
   ]*/
 
 export default function Intensity(props) {
-  const formatActivity = (kindValue) => {
+  const format = (kindValue) => {
     let toFrench;
     switch (kindValue) {
       case "cardio":
@@ -64,6 +64,7 @@ export default function Intensity(props) {
     }
     return toFrench;
   }
+  console.log(props.data);
   return (
     <section className="chartsIntensity">
       <ResponsiveContainer
@@ -79,20 +80,19 @@ export default function Intensity(props) {
           //rayon extérieur maxminim du cercle
           outerRadius="60%"
           data={props.data}
-
         >
           <PolarGrid radialLines={false} />
           <PolarAngleAxis
             dataKey="kind"
             tickLine={false}
-            tickFormatter={(kindValue) => formatActivity(kindValue)}
+            tickFormatter={(kindValue) => format(kindValue)}
             tick={{ fontSize: 12, fontWeight: 500 }}
-            stroke="white"
+            stroke="#ffffff"
             dy={5}
           />
 
           <Tooltip
-            labelFormatter={(kindValue) => formatActivity(kindValue)}
+            labelFormatter={(kindValue) => format(kindValue)}
           />
 
           <Radar

@@ -32,25 +32,24 @@ export default function Weight({ data }) {
     <section className="WeightContainer">
       <div className="WeightLegend">
         <div className="WeightTitle">Activité quotidienne</div>
-        <div className="WeightCircles">
-          <div className="WeightCircle">
-            <div className="weight-circle_black"></div>
+        <div className="wrapperboxCircle">
+          <div className="boxCircle">
+            <div className="weightCircle circleBlack"></div>
             <p>Poids (kg)</p>
           </div>
-          <div className="WeightCircle">
-            <div className=" weight-circle_red"></div>
+          <div className="boxCircle">
+            <div className="weightCircle circleRed"></div>
             <p>Calories brûlées (kCal)</p>
           </div>
         </div>
       </div>
-      <ResponsiveContainer width="100%" height={260}>
+      <ResponsiveContainer width="100%" height={250}>
         <BarChart
-
           margin={{
             top: 30,
             right: 50,
             left: 50,
-            bottom: 10,
+            bottom: 15,
           }}
           //Espacement entre des bars de catégories diférentes 
           barCategoryGap="40%"
@@ -89,7 +88,7 @@ export default function Weight({ data }) {
             position={{ y: 0 }}
             cursor={{
               fill: "#C4C4C4",
-              fillOpacity: "0.4",
+              fillOpacity: "0.3",
             }}
             // Infos bulle
             content={<CustomTooltip />}

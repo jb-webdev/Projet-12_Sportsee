@@ -4,12 +4,13 @@
     height: 263px;
     border-radius: 5px;
     margin-right: 5px;
-    background-color: var(--color-bg-3);
+    background-color: var(--color-bg-primary-3);
+    flex-grow: 1;
 }
 
 .averageTitle {
-    color: var(--color-fonts-2);
-    font-family: Roboto;
+    color: var(--color-fonts-white);
+    font-family: var(--fonts-familly-1);
     position: absolute;
     font-size: 15px;
     font-weight: 500;
