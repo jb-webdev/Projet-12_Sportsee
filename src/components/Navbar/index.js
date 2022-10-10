@@ -6,19 +6,24 @@ import { GlobalContext } from '../../utils/Context/globalContext.js'
 import logo from '../../utils/assets/icons/logo-black.png'
 
 export default function Navbar() {
-  const { userAuth } = useContext(GlobalContext)
+  const { userAuth, toggleUserAuth } = useContext(GlobalContext)
+
+  const userdeconnexion = () => {
+    toggleUserAuth(false)
+    
+  }
 
   return (
     <header className='headerNavbar'>
       <div className="navBarContainer">
-        <Link className="navbarLinkLogo" to="/" >
+        <Link onClick={userdeconnexion} className="navbarLinkLogo" to="/" >
           <img className="navbarLogo" src={logo} alt="logo" />
         </Link>
         {userAuth ? <div className="navbarWrapperLink">
-          <Link className='linkNavbar' to="/">Accueil</Link>
-          <Link className='linkNavbar' to="/">Profil</Link>
-          <Link className='linkNavbar' to="/">Réglage</Link>
-          <Link className='linkNavbar' to="/">Communauté</Link>
+          <Link onClick={userdeconnexion} className='linkNavbar' to="/">Accueil</Link>
+          <Link onClick={userdeconnexion} className='linkNavbar' to="/">Profil</Link>
+          <Link onClick={userdeconnexion} className='linkNavbar' to="/">Réglage</Link>
+          <Link onClick={userdeconnexion} className='linkNavbar' to="/">Communauté</Link>
         </div> : ''}
 
       </div>

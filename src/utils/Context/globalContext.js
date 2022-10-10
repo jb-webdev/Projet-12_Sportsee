@@ -8,7 +8,7 @@ const GlobalContextProvider = (props) => {
     
     const [userAuth, setUserAuth] = useState(false)
     const [userId, setUserId] = useState("12")
-    const [typeData, setTypeData] = useState("mocks")
+    const [typeData, setTypeData] = useState(null)
     /* on traite les datas */
     const [userInfo, setUserInfo] = useState(null)
     const [userPerformance, setUserPerformance] = useState(null)
@@ -17,13 +17,12 @@ const GlobalContextProvider = (props) => {
 
     function getAllData(){
         const datas = new GetData()
-        datas.getUser(userId).then((data) => setUserInfo(data))
-        datas.getUserPerformance(userId).then((data) => setUserPerformance(data))
-        datas.getUserAverageSession(userId).then((data) => setUserAverageSession(data))
-        datas.getUserActivity(userId).then((data) => setUserActivity(data))
+        datas.getUser(userId, typeData).then((data) => setUserInfo(data))
+        datas.getUserPerformance(userId, typeData).then((data) => setUserPerformance(data))
+        datas.getUserAverageSession(userId, typeData).then((data) => setUserAverageSession(data))
+        datas.getUserActivity(userId, typeData).then((data) => setUserActivity(data))
       }
-      useEffect(getAllData, [userId])
-
+      useEffect(getAllData, [userId, typeData])
 
     const toggleUserAuth = () => {
         setUserAuth(userAuth ? false : true)
@@ -31,8 +30,8 @@ const GlobalContextProvider = (props) => {
     const toggleUserId = (selectId) => {
         setUserId(selectId)
     }
-    const toggleTypeData = (typeData) => {
-        setTypeData(typeData)
+    const toggleTypeData = (data) => {
+        setTypeData(data)
     }
     return(
         <GlobalContext.Provider value={{

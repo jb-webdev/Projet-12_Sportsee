@@ -29,12 +29,12 @@
     font-weight: 600;
     line-height: 0rem;
     padding: 0.5rem 0.5rem;
-    background-color: var(--color-fonts-2);
+    background-color: var(--color-bg-white);
 }
 
 .formatXAxis {
-    color: var(--color-fonts-2);
-    font-family: Roboto;
+    color: var(--color-fonts-white);
+    font-family: var(--fonts-familly-1);
     font-weight: 500;
     font-size: 12px;
     line-height: 24px;

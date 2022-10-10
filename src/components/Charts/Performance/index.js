@@ -1,5 +1,5 @@
 import React from 'react'
-import './intensity.css'
+import './performance.css'
 import {
   Radar,
   RadarChart,
@@ -36,37 +36,21 @@ import {
     }
   ]*/
 
-export default function Intensity(props) {
-  const format = (kindValue) => {
-    let toFrench;
-    switch (kindValue) {
-      case "cardio":
-        toFrench = "Cardio";
-        break;
-      case "energy":
-        toFrench = "Énergie";
-        break;
-      case "endurance":
-        toFrench = "Endurance";
-        break;
-      case "strength":
-        toFrench = "Force";
-        break;
-      case "speed":
-        toFrench = "Vitesse";
-        break;
-      case "intensity":
-        toFrench = "Intensité";
-        break;
-      default:
-        toFrench = "";
-        break;
-    }
-    return toFrench;
+export default function Performance(props) {
+  const kind = {
+    1: 'Intensité',
+    2: 'Vitesse',
+    3: 'Force',
+    4: 'Endurance',
+    5: 'Energie',
+    6: 'Cardio',
   }
-  console.log(props.data);
+  const getKind = (indexKind) => {
+    return kind[indexKind]
+  }
+ 
   return (
-    <section className="chartsIntensity">
+    <section className="chartsPerformance">
       <ResponsiveContainer
         width="100%"
         height="100%"
@@ -85,14 +69,14 @@ export default function Intensity(props) {
           <PolarAngleAxis
             dataKey="kind"
             tickLine={false}
-            tickFormatter={(kindValue) => format(kindValue)}
+            tickFormatter={getKind}
             tick={{ fontSize: 12, fontWeight: 500 }}
             stroke="#ffffff"
             dy={5}
           />
 
           <Tooltip
-            labelFormatter={(kindValue) => format(kindValue)}
+            labelFormatter={getKind}
           />
 
           <Radar

@@ -8,9 +8,8 @@ import { GlobalContext } from '../../utils/Context/globalContext.js'
 import Sayhello from '../../components/SayHello/index.js'
 import Weight from '../../components/Charts/Weight/index.js'
 import AverageSession from '../../components/Charts/AverageSession/index.js'
-import Intensity from '../../components/Charts/Intensity/index.js'
+import Performance from '../../components/Charts/Performance/index.js'
 import Score from '../../components/Charts/Score/index.js'
-
 import InfoNutritional from '../../components/InfoNutritional/index.js'
 // icons
 import calories from '../../utils/assets/icon-svg/icon-calories.svg'
@@ -26,8 +25,10 @@ export default function Dashboard() {
   // console.log(userActivity)
   // console.log(userAverageSession)
   // console.log(userPerformance.data)
-  //console.log(userInfo)
-
+  // console.log(userInfo)
+  
+  const scoreUser = userInfo.todayScore || userInfo.score
+  
   return (
     <>
       { !userAuth ? 
@@ -40,8 +41,8 @@ export default function Dashboard() {
             <Weight data={userActivity} />
             <div className='wrapperSmallCharts'>
               <AverageSession data={userAverageSession} />
-              <Intensity data={userPerformance.data}/>
-              <Score data={userInfo.todayScore}/>
+              <Performance data={userPerformance.data}/>
+              <Score data={scoreUser}/>
             </div>
           </section>
           <section className='wrapperInfoSection'>
@@ -67,7 +68,6 @@ export default function Dashboard() {
               value={userInfo.keyData.lipidCount}
               unit='g'
             />
-
           </section>
         </div>
       </main>

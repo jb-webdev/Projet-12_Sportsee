@@ -6,6 +6,8 @@ import { GlobalContext } from '../../utils/Context/globalContext.js'
 
 export default function Home() {
   const { toggleUserAuth, toggleUserId, toggleTypeData, userId } = useContext(GlobalContext)
+  
+
   var navigate = useNavigate()
 
   const handleChange = e => {

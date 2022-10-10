@@ -56,7 +56,7 @@ export default function AverageSession(props) {
           <Tooltip
             content={<CustomTooltip />}
             cursor={{
-              stroke: "black",
+              stroke: "#ffffff",
               strokeOpacity: 0.08,
               strokeWidth: 30,
             }}
