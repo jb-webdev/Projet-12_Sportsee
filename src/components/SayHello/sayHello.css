@@ -1,6 +1,7 @@
 .dashboardHeader {
     margin-left: 224px;
 }
+
 .dashboardHeader .firstname {
     color: var(--color-fonts-primary);
 }

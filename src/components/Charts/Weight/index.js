@@ -1,3 +1,7 @@
+/**
+ * @file Weight is a component that returns a Bar Chart
+ * @author jean-jacques BOERO
+ */
 import React from 'react'
 import './weight.css'
 import {
@@ -9,7 +13,12 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts"
-
+/**
+ * Display the Bar chart component
+ * @component
+ * @param {Array} data user Activity
+ * @returns {reactElement}
+ */
 export default function Weight({ data }) {
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload) {

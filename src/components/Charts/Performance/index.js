@@ -1,3 +1,7 @@
+/**
+ * @file Performance is a component that returns a RadarChart
+ * @author jean-jacques BOERO
+ */
 import React from 'react'
 import './performance.css'
 import {
@@ -35,7 +39,12 @@ import {
       "kind": 6
     }
   ]*/
-
+/**
+ * Display the RadarChart component
+ * @component
+ * @param {Array} data user Performance
+ * @returns {reactElement}
+ */
 export default function Performance(props) {
   const kind = {
     1: 'Intensité',
@@ -48,7 +57,7 @@ export default function Performance(props) {
   const getKind = (indexKind) => {
     return kind[indexKind]
   }
- 
+
   return (
     <section className="chartsPerformance">
       <ResponsiveContainer

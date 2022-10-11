@@ -1,12 +1,12 @@
-import React, {useContext} from 'react'
+import React, { useContext } from 'react'
 import './home.css'
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { GlobalContext } from '../../utils/Context/globalContext.js'
 
 
 export default function Home() {
   const { toggleUserAuth, toggleUserId, toggleTypeData, userId } = useContext(GlobalContext)
-  
+
 
   var navigate = useNavigate()
 

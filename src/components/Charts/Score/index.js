@@ -1,3 +1,7 @@
+/**
+ * @file Score is a component that returns a PieChart
+ * @author jean-jacques BOERO
+ */
 import React from 'react'
 import './score.css'
 
@@ -6,18 +10,24 @@ import {
   PieChart,
   Pie,
   Cell
-} from "recharts";
+} from "recharts"
 
+/**
+ * Display the PieChart component
+ * @component
+ * @param {Array} data user Score
+ * @returns {reactElement}
+ */
 export default function Score({ data }) {
-  const todayScore = data;
-  const scorePerCent = todayScore * 100;
-  const rest = 100 - scorePerCent;
+  const todayScore = data
+  const scorePerCent = todayScore * 100
+  const rest = 100 - scorePerCent
   const score = [
     { name: "objectif", value: scorePerCent, fillColor: '#ff0101' },
     { name: "objectif Restant", value: rest, fillColor: '#fbfbfb' },
-  ];
-  const scoreLabel = score[0].value + "%";
-  const data0 = [{ name: "Score", value: 100 }];
+  ]
+  const scoreLabel = score[0].value + "%"
+  const data0 = [{ name: "Score", value: 100 }]
   return (
     <section className="ScoreWrapper">
       <div className="ScoreTitle">Score</div>

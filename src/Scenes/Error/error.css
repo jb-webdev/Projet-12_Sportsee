@@ -1,13 +1,14 @@
-.errorPage{
+.errorPage {
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+
 
 }
+
 .errorPage h1 {
     color: red;
 }

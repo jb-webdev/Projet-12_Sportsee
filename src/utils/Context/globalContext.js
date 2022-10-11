@@ -1,11 +1,13 @@
-import React, { createContext, useState, useEffect} from 'react'
-
+import React, { createContext, useState, useEffect } from 'react'
 import GetData from '../../Services/getData.js'
 
-export const GlobalContext = createContext() 
+export const GlobalContext = createContext()
+
+
+
 
 const GlobalContextProvider = (props) => {
-    
+
     const [userAuth, setUserAuth] = useState(false)
     const [userId, setUserId] = useState("12")
     const [typeData, setTypeData] = useState(null)
@@ -15,14 +17,14 @@ const GlobalContextProvider = (props) => {
     const [userActivity, setUserActivity] = useState(null)
     const [userAverageSession, setUserAverageSession] = useState(null)
 
-    function getAllData(){
-        const datas = new GetData()
-        datas.getUser(userId, typeData).then((data) => setUserInfo(data))
-        datas.getUserPerformance(userId, typeData).then((data) => setUserPerformance(data))
-        datas.getUserAverageSession(userId, typeData).then((data) => setUserAverageSession(data))
-        datas.getUserActivity(userId, typeData).then((data) => setUserActivity(data))
-      }
-      useEffect(getAllData, [userId, typeData])
+    function getAllData() {
+        const datas = new GetData(userId, typeData)
+        datas.getUser().then((data) => setUserInfo(data))
+        datas.getUserPerformance().then((data) => setUserPerformance(data))
+        datas.getUserAverageSession().then((data) => setUserAverageSession(data))
+        datas.getUserActivity().then((data) => setUserActivity(data))
+    }
+    useEffect(getAllData, [userId, typeData])
 
     const toggleUserAuth = () => {
         setUserAuth(userAuth ? false : true)
@@ -33,10 +35,10 @@ const GlobalContextProvider = (props) => {
     const toggleTypeData = (data) => {
         setTypeData(data)
     }
-    return(
+    return (
         <GlobalContext.Provider value={{
-            userAuth, 
-            userId, 
+            userAuth,
+            userId,
             typeData,
             toggleUserAuth,
             toggleUserId,
@@ -45,7 +47,7 @@ const GlobalContextProvider = (props) => {
             userPerformance,
             userAverageSession,
             userActivity,
-            }}>
+        }}>
 
             {props.children}
 

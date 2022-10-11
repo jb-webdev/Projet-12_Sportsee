@@ -10,7 +10,7 @@ export default function Navbar() {
 
   const userdeconnexion = () => {
     toggleUserAuth(false)
-    
+
   }
 
   return (

@@ -1,3 +1,8 @@
+/**
+ * @file AverageSessions is a component that returns a LineChart
+ * @author jean-jacques BOERO
+ */
+
 import React from 'react'
 import './averageSession.css'
 import {
@@ -32,7 +37,13 @@ const CustomTooltip = ({ active, payload }) => {
 
   return null;
 }
-//{ data: { sessions } }
+
+/**
+ * Display the LineChart component
+ * @component
+ * @param {Array} data user average sessions
+ * @returns {reactElement}
+ */
 export default function AverageSession(props) {
   return (
     <section className="averageContainer">

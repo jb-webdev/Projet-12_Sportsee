@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, { useContext } from 'react'
 import './dashboard.css'
 
 import Error from '../Error/index.js'
@@ -20,57 +20,57 @@ import lipides from '../../utils/assets/icon-svg/icon-lipids.svg'
 
 export default function Dashboard() {
   const { userAuth, userInfo, userPerformance, userAverageSession, userActivity } = useContext(GlobalContext)
-  
+
   // console.log(userInfo.userInfos.firstName)
   // console.log(userActivity)
   // console.log(userAverageSession)
   // console.log(userPerformance.data)
   // console.log(userInfo)
-  
+
   const scoreUser = userInfo.todayScore || userInfo.score
-  
+
   return (
     <>
-      { !userAuth ? 
-      <Error /> 
-      : 
-      <main className='mainDashboard'>
-        <Sayhello userName={userInfo.userInfos.firstName} />
-        <div className='mainWrapper'>
-          <section className='wrapperCharts'>
-            <Weight data={userActivity} />
-            <div className='wrapperSmallCharts'>
-              <AverageSession data={userAverageSession} />
-              <Performance data={userPerformance.data}/>
-              <Score data={scoreUser}/>
-            </div>
-          </section>
-          <section className='wrapperInfoSection'>
-            <InfoNutritional
-              image={calories}
-              title='Calories'
-              value={userInfo.keyData.calorieCount}
-              unit='kCal'
-            />
-            <InfoNutritional
-              image={proteines}
-              title='Proteines'
-              value={userInfo.keyData.proteinCount}
-              unit='g' />
-            <InfoNutritional
-              image={glucides}
-              title='Glucides'
-              value={userInfo.keyData.carbohydrateCount}
-              unit='g' />
-            <InfoNutritional
-              image={lipides}
-              title='Lipides'
-              value={userInfo.keyData.lipidCount}
-              unit='g'
-            />
-          </section>
-        </div>
-      </main>
+      {!userAuth ?
+        <Error />
+        :
+        <main className='mainDashboard'>
+          <Sayhello userName={userInfo.userInfos.firstName} />
+          <div className='mainWrapper'>
+            <section className='wrapperCharts'>
+              <Weight data={userActivity} />
+              <div className='wrapperSmallCharts'>
+                <AverageSession data={userAverageSession} />
+                <Performance data={userPerformance.data} />
+                <Score data={scoreUser} />
+              </div>
+            </section>
+            <section className='wrapperInfoSection'>
+              <InfoNutritional
+                image={calories}
+                title='Calories'
+                value={userInfo.keyData.calorieCount}
+                unit='kCal'
+              />
+              <InfoNutritional
+                image={proteines}
+                title='Proteines'
+                value={userInfo.keyData.proteinCount}
+                unit='g' />
+              <InfoNutritional
+                image={glucides}
+                title='Glucides'
+                value={userInfo.keyData.carbohydrateCount}
+                unit='g' />
+              <InfoNutritional
+                image={lipides}
+                title='Lipides'
+                value={userInfo.keyData.lipidCount}
+                unit='g'
+              />
+            </section>
+          </div>
+        </main>
       }
     </>
   )
