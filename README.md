@@ -49,19 +49,16 @@ Open a terminal in the backend folder and install the package (described in `pac
 
 ```
 $ npm install
-
 ```
 or 
 
 ```
 $ yarn install
-
 ```
 Start your local server :
 
 ```
 $ yarn run
-
 ```
 The Backend is run on this adress : http://localhost:3000/
 
@@ -71,25 +68,21 @@ Go to the cloned this repository on your computer and open a terminal in the fro
 
 ```
 $ npm install
-
 ```
 or
 
 ```
 $ yarn install
-
 ```
 Start your local server :
 
 ```
 $ npm start
-
 ```
 or
 
 ```
 $ yarn start
-
 ```
 
 The FrontEnd is run on this adress : http://localhost:8080/
