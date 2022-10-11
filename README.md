@@ -15,7 +15,7 @@ You can also clone and use the backend, see instructions below
 
 ## Documentation
 
-You can read documentation "mettre le liens vers ma documentation"
+You can read documentation : METTRE LE LIENS VERS LA DOCUMENTATION ICI
 
 ## Installation
 
@@ -42,8 +42,7 @@ Personally I use vs-code under linux (unbuntu)
 ### BackEnd :
 
 Go to the cloned repository on your computer
-
-#### mettre le liens du backend ici même
+You can clone the backend here : https://github.com/jb-webdev/Projet-12-Sportsee-backend
 
 Open a terminal in the backend folder and install the package (described in `package.json`) :
 
