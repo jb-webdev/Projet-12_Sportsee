@@ -15,7 +15,7 @@ You can also clone and use the backend, see instructions below
 
 ## Documentation
 
-You can read documentation : METTRE LE LIENS VERS LA DOCUMENTATION : <a href="https://jb-webdev.github.io/Projet-12_Sportsee/" target="_blank">Documentation</a> 
+You can read documentation : <a href="https://jb-webdev.github.io/Projet-12_Sportsee/" target="_blank">Documentation</a> 
 
 ## Installation
 
