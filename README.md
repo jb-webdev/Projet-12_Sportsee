@@ -30,7 +30,7 @@ Personally I use vs-code under linux (unbuntu)
 ## Dependencies:
 
 * better-docs : 2.7.2
-* prop-types": 15.8.1
+* prop-types : 15.8.1
 * react : 18.2.0
 * react-dom : 18.2.0
 * react-router-dom : 6.4.1
