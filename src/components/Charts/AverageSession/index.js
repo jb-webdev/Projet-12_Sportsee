@@ -5,6 +5,7 @@
 
 import React from 'react'
 import './averageSession.css'
+import PropTypes from 'prop-types'
 import {
   LineChart,
   Line,
@@ -12,7 +13,7 @@ import {
   XAxis,
   YAxis,
   Tooltip,
-} from "recharts";
+} from "recharts"
 
 
 /*const dataTest = [ 
@@ -35,7 +36,7 @@ const CustomTooltip = ({ active, payload }) => {
     )
   }
 
-  return null;
+  return null
 }
 
 /**
@@ -44,13 +45,13 @@ const CustomTooltip = ({ active, payload }) => {
  * @param {Array} data user average sessions
  * @returns {reactElement}
  */
-export default function AverageSession(props) {
+export default function AverageSession({datas}) {
   return (
     <section className="averageContainer">
       <div className="averageTitle">Durée moyenne des sessions</div>
       <ResponsiveContainer width="100%" height="100%" padding={0}>
         <LineChart
-          data={props.data}
+          data={datas}
           margin={{ top: 0, right: 0, left: 0, bottom: -10 }}
         >
           <XAxis
@@ -99,4 +100,8 @@ export default function AverageSession(props) {
       </div>
     </section>
   )
+}
+
+AverageSession.propTypes = {
+  datas: PropTypes.array.isRequired,
 }

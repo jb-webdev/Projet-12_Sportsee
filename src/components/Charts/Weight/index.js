@@ -4,6 +4,7 @@
  */
 import React from 'react'
 import './weight.css'
+import PropTypes from 'prop-types'
 import {
   BarChart,
   CartesianGrid,
@@ -19,7 +20,7 @@ import {
  * @param {Array} data user Activity
  * @returns {reactElement}
  */
-export default function Weight({ data }) {
+export default function Weight({ datas }) {
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload) {
       return (
@@ -64,7 +65,7 @@ export default function Weight({ data }) {
           barCategoryGap="40%"
           //L'écart entre deux barres de la même catégorie
           barGap={1}
-          data={data}
+          data={datas}
         >
           <CartesianGrid
             //point horizontale de la grid
@@ -121,4 +122,8 @@ export default function Weight({ data }) {
       </ResponsiveContainer>
     </section>
   )
+}
+
+Weight.propTypes = {
+  datas: PropTypes.array.isRequired,
 }

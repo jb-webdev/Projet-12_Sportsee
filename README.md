@@ -30,6 +30,7 @@ Personally I use vs-code under linux (unbuntu)
 ## Dependencies:
 
 * better-docs : 2.7.2
+* prop-types": 15.8.1
 * react : 18.2.0
 * react-dom : 18.2.0
 * react-router-dom : 6.4.1
@@ -42,7 +43,7 @@ Personally I use vs-code under linux (unbuntu)
 ### BackEnd :
 
 Go to the cloned repository on your computer
-You can clone the backend here :<a href="https://github.com/jb-webdev/Projet-12-Sportsee-backend" target="_blank">Repository BackEnd </a> 
+You can clone the backend here : <a href="https://github.com/jb-webdev/Projet-12-Sportsee-backend" target="_blank">Repository BackEnd </a> 
 
 Open a terminal in the backend folder and install the package (described in `package.json`) :
 
@@ -57,7 +58,7 @@ $ yarn install
 Start your local server :
 
 ```
-$ yarn run
+$ yarn start
 ```
 The Backend is run on this adress : http://localhost:3000/
 

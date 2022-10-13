@@ -4,6 +4,7 @@
  */
 import React from 'react'
 import './performance.css'
+import PropTypes from 'prop-types'
 import {
   Radar,
   RadarChart,
@@ -45,7 +46,7 @@ import {
  * @param {Array} data user Performance
  * @returns {reactElement}
  */
-export default function Performance(props) {
+export default function Performance({datas}) {
   const kind = {
     1: 'Intensité',
     2: 'Vitesse',
@@ -72,7 +73,7 @@ export default function Performance(props) {
           innerRadius="5%"
           //rayon extérieur maxminim du cercle
           outerRadius="60%"
-          data={props.data}
+          data={datas}
         >
           <PolarGrid radialLines={false} />
           <PolarAngleAxis
@@ -97,5 +98,9 @@ export default function Performance(props) {
         </RadarChart>
       </ResponsiveContainer>
     </section>
-  );
+  )
+}
+
+Performance.propTypes = {
+  datas: PropTypes.array.isRequired,
 }

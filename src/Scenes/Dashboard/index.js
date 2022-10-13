@@ -35,14 +35,14 @@ export default function Dashboard() {
         <Error />
         :
         <main className='mainDashboard'>
-          <Sayhello userName={userInfo.userInfos.firstName} />
+          <Sayhello username={userInfo.userInfos.firstName} />
           <div className='mainWrapper'>
             <section className='wrapperCharts'>
-              <Weight data={userActivity} />
+              <Weight datas={userActivity} />
               <div className='wrapperSmallCharts'>
-                <AverageSession data={userAverageSession} />
-                <Performance data={userPerformance.data} />
-                <Score data={scoreUser} />
+                <AverageSession datas={userAverageSession} />
+                <Performance datas={userPerformance.data} />
+                <Score datas={scoreUser} />
               </div>
             </section>
             <section className='wrapperInfoSection'>

@@ -4,6 +4,7 @@
  */
 import React from 'react'
 import './score.css'
+import PropTypes from 'prop-types'
 
 import {
   ResponsiveContainer,
@@ -18,8 +19,8 @@ import {
  * @param {Array} data user Score
  * @returns {reactElement}
  */
-export default function Score({ data }) {
-  const todayScore = data
+export default function Score({ datas }) {
+  const todayScore = datas
   const scorePerCent = todayScore * 100
   const rest = 100 - scorePerCent
   const score = [
@@ -73,6 +74,10 @@ export default function Score({ data }) {
         </p>
       </div>
     </section>
-  );
+  )
+}
+
+Score.propTypes = {
+  datas: PropTypes.number.isRequired,
 }
 
