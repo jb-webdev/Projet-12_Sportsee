@@ -4,11 +4,10 @@
 ## Description of the study project 
 
 - Realization of an application with React
-- Cutting into modular and reusable components
-- Used Hooks (UseContext, UseEffect ....)
-- use an API and Mocks
-- Using a library to generate graphics
-- Create project documentation
+- Ensuring the data quality of an application
+- Interact with a web service
+- Develop advanced graphical elements using JavaScript libraries
+- Produce technical documentation for an application
 
 It's a frontend project, it can be cloned and launched locally.
 You can also clone and use the backend, see instructions below
