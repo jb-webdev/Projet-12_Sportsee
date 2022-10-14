@@ -1,12 +1,22 @@
 .boxNutritional {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
-  align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
   background-color: var(--color-bg-white-3);
   border-radius: 5px;
-  box-shadow: var(--color-box-Shadow-2);
+  -webkit-box-shadow: var(--color-box-Shadow-2);
+          box-shadow: var(--color-box-Shadow-2);
   height: 124px;
   width: 258px;
   border-radius: 5px;
@@ -21,9 +31,16 @@
 .textBoxNutritional {
   margin-left: 24px;
   height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   overflow: hidden;
   
 }

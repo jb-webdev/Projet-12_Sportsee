@@ -6,8 +6,12 @@
 
 .mainWrapper {
   width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .wrapperCharts {
@@ -16,8 +20,12 @@
 
 .wrapperSmallCharts {
   width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   margin-top: 28px;
   margin-bottom: 0rem;
   gap: 1%;
@@ -25,41 +33,53 @@
 }
 
 .wrapperInfoSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: auto;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 77px;
   margin-left: 31px;
-  
+
 }
 
-@media (max-width: 1412px) { 
+@media (max-width: 1412px) {
   .mainDashboard {
     padding-left: 50px;
   }
 }
-@media (max-width: 1290px) { 
+
+@media (max-width: 1290px) {
   .mainDashboard {
     padding-left: 20px;
   }
 }
-@media (max-width: 1276px) { 
+
+@media (max-width: 1276px) {
   .wrapperCharts {
     width: 800px;
   }
 }
-@media (max-width: 1212px) { 
+
+@media (max-width: 1212px) {
   .wrapperCharts {
     width: 700px;
   }
 }
-@media (max-width: 1108px) { 
+
+@media (max-width: 1108px) {
   .wrapperCharts {
     width: 650px;
   }
 }
-@media (max-width: 1050px) { 
+
+@media (max-width: 1050px) {
   .wrapperCharts {
     width: 600px;
   }

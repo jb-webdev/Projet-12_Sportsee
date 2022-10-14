@@ -7,5 +7,7 @@
     padding: 1px;
 
     margin-right: 5px;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
 }
