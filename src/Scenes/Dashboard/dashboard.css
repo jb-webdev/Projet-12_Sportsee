@@ -1,28 +1,27 @@
 .mainDashboard {
-  padding-top: 159px;
+  padding-left: 107px;
+  padding-top: 68px;
   padding-bottom: 88px;
 }
 
 .mainWrapper {
   width: auto;
-  position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .wrapperCharts {
   width: 70%;
-  margin-left: 224px;
-  margin-right: 31px;
 }
 
 .wrapperSmallCharts {
   width: auto;
   display: flex;
   justify-content: space-evenly;
-  margin-top: 77px;
+  margin-top: 28px;
   margin-bottom: 0rem;
-  gap: 32px;
+  gap: 1%;
+  overflow: hidden;
 }
 
 .wrapperInfoSection {
@@ -30,6 +29,38 @@
   width: auto;
   flex-direction: column;
   justify-content: space-between;
-  margin-right: 90px;
   margin-top: 77px;
+  margin-left: 31px;
+  
+}
+
+@media (max-width: 1412px) { 
+  .mainDashboard {
+    padding-left: 50px;
+  }
+}
+@media (max-width: 1290px) { 
+  .mainDashboard {
+    padding-left: 20px;
+  }
+}
+@media (max-width: 1276px) { 
+  .wrapperCharts {
+    width: 800px;
+  }
+}
+@media (max-width: 1212px) { 
+  .wrapperCharts {
+    width: 700px;
+  }
+}
+@media (max-width: 1108px) { 
+  .wrapperCharts {
+    width: 650px;
+  }
+}
+@media (max-width: 1050px) { 
+  .wrapperCharts {
+    width: 600px;
+  }
 }

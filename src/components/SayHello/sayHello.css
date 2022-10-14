@@ -1,20 +1,18 @@
-.dashboardHeader {
-    margin-left: 224px;
-}
+
 
 .dashboardHeader .firstname {
     color: var(--color-fonts-primary);
 }
 
 .dashboardHeader h1 {
-    font-size: 3rem;
+    font-size: 48px;
     font-weight: 500;
     margin: 0;
     margin-bottom: 41px;
 }
 
 .dashboardHeader p {
-    font-size: 1.3rem;
+    font-size: 18px;
     font-weight: 400;
     margin: 0;
 }

@@ -8,7 +8,7 @@ export default function InfoNutritional({ image, title, value, unit }) {
     <div className="boxNutritional">
       <img src={image} alt={title} />
       <div className="textBoxNutritional">
-        <div className="value">{value} {unit}</div>
+        <p className="textvalue">{value} {unit}</p>
         <p className='paraphNutritional'>{title}</p>
       </div>
     </div>

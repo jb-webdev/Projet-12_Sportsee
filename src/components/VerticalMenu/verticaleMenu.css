@@ -1,5 +1,6 @@
 .verticalMenu {
-    position: fixed;
+    background: var(--color-bg-black);
+    box-shadow: var(--color-box-Shadow);
     bottom: 0;
     width: 117px;
     height: 100%;
@@ -7,9 +8,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background: var(--color-bg-black);
-    box-shadow: var(--color-box-Shadow);
-    padding-top: 340px;
     overflow: hidden;
 }
 
@@ -18,7 +16,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 150px;
+    margin-top: 208px;
 }
 
 .iconVerticalMenu {
@@ -27,8 +25,9 @@
 }
 
 .verticalMenuCopyright {
-    height: 117px;
-    width: 200px;
+    height: auto;
+    width: 12.5rem;
+    margin-bottom: 59px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +40,13 @@
     font-family: var(--fonts-familly-1);
     font-style: normal;
     font-weight: 500;
-    font-size: 12px;
-    line-height: 24px;
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
 
+@media (max-width: 1290px)  {
+    .verticalMenu {
+        width: 90px;
+        
+    }
 }

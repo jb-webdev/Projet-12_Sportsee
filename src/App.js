@@ -8,9 +8,15 @@ function App() {
   
   return (
     <div className="App">
-      <Navbar />
-      <VerticalMenu />
-      <ApppRouter />
+        <Navbar />
+      <main id="mainwrapper">
+        <div className='mainVerticalMenu'>
+         <VerticalMenu />
+        </div>
+        <div className='mainSectionPages'>
+          <ApppRouter />
+        </div>
+      </main>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 .mainHome {
     background-color: var(--color-bg-white-2);
-    min-height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

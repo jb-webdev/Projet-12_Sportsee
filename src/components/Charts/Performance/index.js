@@ -80,7 +80,7 @@ export default function Performance({datas}) {
             dataKey="kind"
             tickLine={false}
             tickFormatter={getKind}
-            tick={{ fontSize: 12, fontWeight: 500 }}
+            tick={{ fontSize: 10, fontWeight: 500 }}
             stroke="#ffffff"
             dy={5}
           />

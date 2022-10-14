@@ -1,9 +1,10 @@
 .chartsPerformance {
-    width: 258px;
+    width: 33%;
     height: 263px;
     position: relative;
     border-radius: 5px;
     background-color: var(--color-bg-grey-secondary);
+    padding: 1px;
 
     margin-right: 5px;
     flex-grow: 1;
