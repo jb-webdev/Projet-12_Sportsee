@@ -19,21 +19,22 @@ import lipides from '../../utils/assets/icon-svg/icon-lipids.svg'
 
 
 export default function Dashboard() {
-  const { userAuth, userInfo, userPerformance, userAverageSession, userActivity } = useContext(GlobalContext)
+  const { apiError, userInfo, userPerformance, userAverageSession, userActivity } = useContext(GlobalContext)
 
   // console.log(userInfo.userInfos.firstName)
   // console.log(userActivity)
   // console.log(userAverageSession)
   // console.log(userPerformance.data)
   // console.log(userInfo)
-
+   
   const scoreUser = userInfo.todayScore || userInfo.score
+
 
   return (
     <>
-      {!userAuth ?
-        <Error />
-        :
+      {apiError ? 
+      <Error message = "Connection à L'API Impossible"/> 
+        : 
         <main className='mainDashboard'>
           <Sayhello username={userInfo.userInfos.firstName} />
           <div className='mainWrapper'>
@@ -70,7 +71,7 @@ export default function Dashboard() {
               />
             </section>
           </div>
-        </main>
+        </main> 
       }
     </>
   )

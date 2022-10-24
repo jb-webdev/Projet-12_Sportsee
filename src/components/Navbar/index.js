@@ -6,11 +6,10 @@ import { GlobalContext } from '../../utils/Context/globalContext.js'
 import logo from '../../utils/assets/icons/logo-black.png'
 
 export default function Navbar() {
-  const { userAuth, toggleUserAuth } = useContext(GlobalContext)
+  const { userAuth, setUserAuth } = useContext(GlobalContext)
 
   const userdeconnexion = () => {
-    toggleUserAuth(false)
-
+    setUserAuth(false)
   }
 
   return (
@@ -25,7 +24,6 @@ export default function Navbar() {
           <Link onClick={userdeconnexion} className='linkNavbar' to="/">Réglage</Link>
           <Link onClick={userdeconnexion} className='linkNavbar' to="/">Communauté</Link>
         </div> : ''}
-
       </div>
     </header>
   )

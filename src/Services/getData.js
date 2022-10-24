@@ -8,7 +8,6 @@
  */
 export default class GetData {
   /**
-   * 
    * @param {string} userId User ID
    * @param {string} typeData database type chosen for the test 'api' or 'mocks'
    */
@@ -24,18 +23,17 @@ export default class GetData {
    * @returns {string}
    */
   getBaseUrl() {
-    let urlChoise = ''
+    let urlSelect = ''
     switch (this.typeData) {
       case 'api':
-        urlChoise = 'http://localhost:3000/user/'
+        urlSelect = 'http://localhost:3000/user/'
         break;
       case 'mocks':
-        urlChoise = 'http://localhost:8080/user/'
+        urlSelect = 'http://localhost:8080/user/'
         break;
       default:
-        urlChoise = 'http://localhost:8080/user/'
     }
-    return urlChoise
+    return urlSelect
   }
 
   /**
@@ -68,7 +66,7 @@ export default class GetData {
       return datas.data
     }
     catch (error) {
-      console.log(error)
+      return -1
     }
   }
   /**
@@ -82,7 +80,7 @@ export default class GetData {
       return datas.data.sessions
     }
     catch (error) {
-      console.log(error)
+      return -1
     }
   }
 
@@ -97,7 +95,7 @@ export default class GetData {
       return datas.data.sessions
     }
     catch (error) {
-      console.log(error)
+      return -1
     }
   }
   /**
@@ -110,7 +108,7 @@ export default class GetData {
       const datas = await response.json();
       return datas.data
     } catch (error) {
-      console.log(error)
+      return -1
     }
   }
 }
