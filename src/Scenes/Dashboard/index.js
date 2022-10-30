@@ -3,7 +3,6 @@ import './dashboard.css'
 
 import Error from '../Error/index.js'
 
-import { GlobalContext } from '../../utils/Context/globalContext.js'
 // compo
 import Sayhello from '../../components/SayHello/index.js'
 import Weight from '../../components/Charts/Weight/index.js'
@@ -18,60 +17,58 @@ import glucides from '../../utils/assets/icon-svg/icon-carbohydrates.svg'
 import lipides from '../../utils/assets/icon-svg/icon-lipids.svg'
 
 
+
+import { GlobalContext } from '../../utils/Context/globalContext.js'
+import User from '../../utils/models/User.js'
+
 export default function Dashboard() {
   const { apiError, userInfo, userPerformance, userAverageSession, userActivity } = useContext(GlobalContext)
 
-  // console.log(userInfo.userInfos.firstName)
-  // console.log(userActivity)
-  // console.log(userAverageSession)
-  // console.log(userPerformance.data)
-  // console.log(userInfo)
-   
-  const scoreUser = userInfo.todayScore || userInfo.score
 
+  var objectUser = new User(userInfo, userAverageSession, userPerformance, userActivity)
 
   return (
     <>
-      {apiError ? 
-      <Error message = "Connection à L'API Impossible"/> 
-        : 
+      {apiError ?
+        <Error message="Connection à L'API Impossible" />
+        :
         <main className='mainDashboard'>
-          <Sayhello username={userInfo.userInfos.firstName} />
+          <Sayhello username={objectUser.firstname} />
           <div className='mainWrapper'>
             <section className='wrapperCharts'>
-              <Weight datas={userActivity} />
+              <Weight datas={objectUser.weight} />
               <div className='wrapperSmallCharts'>
-                <AverageSession datas={userAverageSession} />
-                <Performance datas={userPerformance.data} />
-                <Score datas={scoreUser} />
+                <AverageSession datas={objectUser.averageSession} />
+                <Performance datas={objectUser.performance} />
+                <Score datas={objectUser.score} />
               </div>
             </section>
             <section className='wrapperInfoSection'>
               <InfoNutritional
                 image={calories}
                 title='Calories'
-                value={userInfo.keyData.calorieCount}
+                value={objectUser.calorieCount}
                 unit='kCal'
               />
               <InfoNutritional
                 image={proteines}
                 title='Proteines'
-                value={userInfo.keyData.proteinCount}
+                value={objectUser.proteinCount}
                 unit='g' />
               <InfoNutritional
                 image={glucides}
                 title='Glucides'
-                value={userInfo.keyData.carbohydrateCount}
+                value={objectUser.carbohydrateCount}
                 unit='g' />
               <InfoNutritional
                 image={lipides}
                 title='Lipides'
-                value={userInfo.keyData.lipidCount}
+                value={objectUser.lipidCount}
                 unit='g'
               />
             </section>
           </div>
-        </main> 
+        </main>
       }
     </>
   )

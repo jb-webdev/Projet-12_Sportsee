@@ -23,6 +23,7 @@ const GlobalContextProvider = (props) => {
         datas.getUserAverageSession().then((data) => setUserAverageSession(data))
         datas.getUserActivity().then((data) => setUserActivity(data))
     }
+
     useEffect(getAllData, [userId, typeData])
     
     const toggleUserId = (selectId) => {
